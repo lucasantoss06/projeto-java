@@ -1,0 +1,163 @@
+/* Reset e estilo base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+/* Fundo principal com gradiente moderno */
+body {
+    background: linear-gradient(135deg, #3A0CA3 0%, #4361EE 33.33%, #3F37C9 66.67%, #240046 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Imagem de fundo sutil */
+body::before {
+    background-image: url("img/code.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.25;
+    z-index: 0;
+}
+
+/* Estrutura principal */
+.container {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 24px;
+    border: 1px solid #4CC9F0;
+    box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.2);
+    background-image: url("img/Ruido.png");
+    background-size: 100% 100%;
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+/* Conteúdo interno alinhado ao rodapé */
+.container__conteudo {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Área de texto e controle */
+.container__informacoes {
+    flex: 1;
+    padding: 3rem;
+}
+
+/* Título principal */
+h1 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 72px;
+    padding-bottom: 3rem;
+}
+
+/* Parágrafo */
+.texto__paragrafo {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+/* Texto com destaque azul */
+.container__texto {
+    margin: 16px 0 16px 0;
+}
+
+.container__texto-azul {
+    color: #4CC9F0;
+}
+
+/* Campo de input estilizado */
+.container__input {
+    width: 100%;
+    height: 72px;
+    border-radius: 16px;
+    background-color: #FFF;
+    border: none;
+    color: #3A0CA3;
+    padding: 2rem;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Botões */
+.container__botao {
+    border-radius: 16px;
+    background: #4CC9F0;
+    padding: 16px 24px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.container__botao:hover:not(:disabled) {
+    background-color: #3AA1DD;
+    transform: translateY(-2px);
+}
+
+.container__botao:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+/* Conjunto de botões */
+.container__botoes {
+    display: flex;
+    gap: 2em;
+}
+
+/* Responsividade */
+@media screen and (max-width: 1250px) {
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .container__botao {
+        font-size: 16px;
+    }
+
+    .texto__paragrafo {
+        font-size: 24px;
+    }
+
+    .container__imagem-pessoa {
+        display: none;
+    }
+
+    .container__conteudo {
+        display: block;
+        position: inherit;
+    }
+
+    .container__informacoes {
+        padding: 1rem;
+    }
+}
